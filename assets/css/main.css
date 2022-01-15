@@ -35,6 +35,14 @@
     cursor: pointer;
 }
 
+.navbar__item--has-qr:hover .navbar__qr {
+    display: block;
+}
+
+.navbar__item-has-notify:hover .navbar__notify {
+    display: block;
+}
+
 .navbar__links {
 
 }
@@ -76,10 +84,23 @@
     left: 0;
     padding: 8px;
     border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.2s;
+}
+
+.navbar__qr::before {
+    content: "";
+    display: block;
+    width:100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: -10px;
 }
 
 .navbar__qr-img {
     width:100%;
+ 
 }
 
 .navbar__qr-apps {
@@ -97,4 +118,114 @@
 
 .navbar__qr-app {
     height: 16px;
+}
+
+/* Navbar notify */
+
+.navbar__notify{
+    width: 404px;
+    position: absolute;
+    right: 0;
+    top: 160%;
+    color: #b8b4b4;
+    background-color: #fff;
+    border: 0.1px solid #b8b4b4;
+    transform-origin: 90% top;
+    animation: navNotify ease-in 0.2s;
+    will-change: opacity, transform;
+    display: none;
+}
+
+.navbar__notify::before {
+    content: "";
+    border: 20px solid ;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -32px;
+    right: 6px;
+}
+
+.navbar__notify::after {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 80px;
+    position: absolute;
+    top: -20px;
+    right:0;
+}
+
+@keyframes navNotify {
+    from {
+        opacity:0;
+        transform: scale(0);
+    }
+    to {
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+.navbar__notify-header{
+    padding: 10px 12px;
+    line-height: 16px;
+    font-weight: 400;
+    cursor: default;
+}
+
+.navbar__notify-list{
+    padding: 0;
+    list-style: none;
+}
+
+.navbar__notify-item{
+    background-color: rgb(249, 237, 234);
+}
+
+.navbar__notify-item:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.navbar__notify-link {
+    padding: 0 12px;
+    display: flex;
+    text-decoration: none;
+    
+}
+
+.navbar__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.navbar__notify-body{
+    margin-left: 10px;
+}
+
+.navbar__notify-body-title{
+    color: rgb(41, 40, 40);
+    font-size: 1.4rem;
+    font-weight: 350;
+    margin: 10px 0;
+
+}
+
+.navbar__notify-body-decr{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.navbar__notify-footer {
+    text-align: center;
+}
+
+.navbar__notify-footer-link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar__notify-footer p {
+    margin: 0;
+    padding: 8px;
 }
