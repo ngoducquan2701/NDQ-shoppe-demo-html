@@ -5,6 +5,9 @@
     --primary-color:#ee4d2d;
     --border-color:#dbdbdb;
     --sub-text-color:rgba(0,0,0,.26);
+    --heigh-navbar: 34px;
+    --heigh-height: 120px;
+    --heigh-header-search: calc(var(--heigh-height) - var(--heigh-navbar));
 }
 
 * {
@@ -115,4 +118,5 @@ html {
     opacity: 0.6;
     cursor: default;
 }
+
 
