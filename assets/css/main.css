@@ -506,6 +506,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) ;
     display: none;
     animation: fadeIn ease-in 0.15s;
+    z-index: 1;
 }
 
 .header__cart-notify::after {
@@ -559,6 +560,10 @@
     height: 10px;
     width: 100%;
     top: 100%;
+}
+
+.header__search-select-list {
+    z-index: 1;
 }
 
 .header__search-select:hover .header__search-select-list{
@@ -649,6 +654,7 @@
     padding: 0;
     overflow: hidden;
     display: none;
+    z-index: 1;
 }
 
 .header__search-history-heading {
@@ -692,13 +698,11 @@
 
 .header__cart-header {
     text-align: left;
-    color: #b5b5b5;
+    color: #7a7979;
     font-size: 1.3rem;
     padding: 12px 0 12px 12px;
     font-weight: 350;
     margin: 0;
-
-
 }
 
 .header__cart-list {
@@ -707,6 +711,8 @@
     list-style: none;
     padding-left: 0;
     margin: 0;
+    height: 52vh;
+    overflow-y: auto;
 }
 
 .header__cart-item {
@@ -732,9 +738,16 @@
 .header__cart-item-head {
     font-size: 1.4rem;
     margin: 0;
-    padding-left: 8px;
+    padding: 0 32px 0 8px;
     font-weight: 400;
     color: var(--text-color);
+    line-height: 1.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+    flex: 1;
 }
 
 .header__cart-item-price {
@@ -1134,4 +1147,83 @@ i.home-product-item__heart-icon-fill {
 
 .home-product-item__label {
     color: var(--white-color);
+}
+
+
+.home-pagination {
+    margin: 30px 0 40px;
+}
+ 
+/* footer */
+
+.footer {
+    background-color: #FBFBFB;
+}
+
+.footer-header {
+    color:rgba(0, 0, 0, 0.54);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: text;
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+}
+
+.footer-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item_link {
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer-item:hover .footer-item_link {
+    color: var(--primary-color);
+}
+
+.footer-list-2__img {
+    width: 80%;
+}
+
+.footer-item__icon {
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 0 10px 4px 0;
+    position: relative;
+    bottom: -1px;
+}
+
+
+.footer-Qr {
+    display: flex;
+}
+
+.footer_qr-img {
+    width: 40%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+}
+
+.footer_qr-apps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.footer__qr-link {
+}
+
+.footer__qr-app {
+    height: 16px;
 }
